@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm & Beat Entertainment - Sound, Music & Digital Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(147, 51, 234, 0.6); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #8B5CF6, #EC4899, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3 sm:py-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center pulse-glow">
+                        <span class="text-sm sm:text-xl font-bold">R&B</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-bold gradient-text">Rhythm & Beat</h1>
+                        <p class="text-xs text-gray-400 hidden sm:block">Entertainment</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="#home" class="hover:text-purple-400 transition-colors text-sm xl:text-base">Home</a>
+                    <a href="#services" class="hover:text-purple-400 transition-colors text-sm xl:text-base">Services</a>
+                    <a href="#about" class="hover:text-purple-400 transition-colors text-sm xl:text-base">About</a>
+                    <a href="#founder" class="hover:text-purple-400 transition-colors text-sm xl:text-base">Our Founder</a>
+                    <a href="#gallery" class="hover:text-purple-400 transition-colors text-sm xl:text-base">Gallery</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors text-sm xl:text-base">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-gray-900/98 backdrop-blur-sm border-t border-purple-500/20">
+                <div class="px-4 py-6 space-y-4">
+                    <a href="#home" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">Home</a>
+                    <a href="#services" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">Services</a>
+                    <a href="#about" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">About</a>
+                    <a href="#founder" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">Our Founder</a>
+                    <a href="#gallery" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">Gallery</a>
+                    <a href="#contact" class="block text-white hover:text-purple-400 transition-colors py-2 text-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="float mb-6 sm:mb-8">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center pulse-glow mb-4 sm:mb-6">
+                    <img src="MEDIA/YOUTUBE_-removebg-preview.png" style="width: 700PX; height: 200PX;">
+                </div>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+                <span class="gradient-text">Rhythm & Beat</span>
+                <br>
+                <span class="text-white">Entertainment</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
+                Experience the Pulse of Entertainment—Only at Rhythm and Beat
+            </p>
+            <p class="text-base sm:text-lg text-gray-400 mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
+                We combine entertainment, creativity, and technology to deliver experiences that resonate, connect, and inspire.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+                <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" 
+                        class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all transform hover:scale-105 w-full sm:w-auto">
+                    Explore Our Services
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                        class="border-2 border-purple-500 hover:bg-purple-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all w-full sm:w-auto">
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 sm:py-16 lg:py-20 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                    <span class="gradient-text">Our Services</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2">
+                    Professional entertainment and digital solutions for every need
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- DJ Services -->
+                <div class="service-card bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 sm:p-8 rounded-2xl border border-purple-500/20">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">DJ Hire</h3>
+                    <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Expert DJs who know how to read the crowd and keep the energy high. Perfect for weddings, corporate events, and parties.
+                    </p>
+                    <ul class="text-gray-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
+                        <li>• Professional DJs</li>
+                        <li>• Extensive Music Library</li>
+                        <li>• Custom Playlists</li>
+                        
+                    </ul>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base">
+                        Book DJ - R1,000 per Hour
+                    </button>
+                </div>
+
+                <!-- Sound Hire -->
+                <div class="service-card bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 sm:p-8 rounded-2xl border border-blue-500/20">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">Professional Sound Systems</h3>
+                    <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Professional sound systems for events of all sizes. From intimate gatherings to large festivals, we provide crystal-clear audio solutions.
+                    </p>
+                    <ul class="text-gray-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
+                        <li>• Premium PA Systems</li>
+                        <li>• Wireless Microphones</li>
+                        <li>• Mixing Consoles</li>
+                        <li>• Stage Monitors</li>
+                        <li>• Technical Support</li>
+                        
+                    </ul>
+                    <button class="w-full bg-blue-900/50 border border-blue-500/50 py-2 sm:py-3 rounded-lg font-semibold transition-colors cursor-not-allowed text-sm sm:text-base">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Music & Video Studio -->
+                <div class="service-card bg-gradient-to-br from-pink-900/30 to-orange-900/30 p-6 sm:p-8 rounded-2xl border border-pink-500/20">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">Music & Video Production</h3>
+                    <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Complete production services from concept to final delivery. Create professional music tracks and stunning video content.
+                    </p>
+                    <ul class="text-gray-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
+                        <li>• Studio Recording</li>
+                        <li>• Music Composition</li>
+                        <li>• Video Production</li>
+                        <li>• Post-Production</li>
+                        <li>• Coming Soon</li>
+                    </ul>
+                    <button class="w-full bg-pink-900/50 border border-pink-500/50 py-2 sm:py-3 rounded-lg font-semibold transition-colors cursor-not-allowed text-sm sm:text-base">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Photo Studio -->
+                <div class="service-card bg-gradient-to-br from-orange-900/30 to-red-900/30 p-6 sm:p-8 rounded-2xl border border-orange-500/20">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 2l-1.83 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-4.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">Photo Studio</h3>
+                    <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Professional photography services tailored for events, portraits, and businesses. Capture your best moments with high-quality images in a creative studio environment.
+                    </p>
+                    <ul class="text-gray-400 space-y-1 sm:space-y-2 mb-3 sm:mb-4 text-sm sm:text-base">
+                        <li>• Portrait Photography</li>
+                        <li>• Event Photography</li>
+                        <li>• Product Shoots</li>
+                        <li>• Creative Studio Sessions</li>
+                        <li>• Photo Editing</li>
+                    </ul>
+                    <button class="w-full bg-orange-900/50 border border-orange-500/50 py-2 sm:py-3 rounded-lg font-semibold transition-colors cursor-not-allowed text-sm sm:text-base">
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card bg-gradient-to-br from-yellow-900/30 to-green-900/30 p-6 sm:p-8 rounded-2xl border border-yellow-500/20">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-yellow-500 to-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">Front-End Development for Small Businesses</h3>
+                    <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Clean, fast, and mobile‑friendly websites tailored for small businesses. From landing pages to full sites, we build experiences that convert and are easy to maintain.
+                    </p>
+                    <ul class="text-gray-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
+                        <li>• Responsive Website Design</li>
+                        <li>• Updates</li>
+                        <li>• Let's Build Your Site</li>
+                    </ul>
+                    <button class="w-full bg-yellow-600 hover:bg-yellow-700 py-2 sm:py-3 rounded-lg font-semibold transition-colors mb-2 sm:mb-3 text-sm sm:text-base">
+                        Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 sm:py-16 lg:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                        <span class="gradient-text">About Rhythm & Beat</span>
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">
+                        Rhythm & Beat is a premier sound hire and DJ service company dedicated to bringing unforgettable audio experiences to live events. Whether you're hosting a wedding, party, concert, or corporate event, we provide professional-grade sound equipment and experienced DJs who know how to read the crowd and keep the energy alive.
+                    </p>
+                    <p class="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6">
+                        We pride ourselves on reliability, sound clarity, and an unbeatable vibe. Our team works closely with clients to tailor sound setups for venues of all sizes—indoors and outdoors. From stage sound systems to full-scale event audio, Rhythm & Beat is your trusted partner for top-tier entertainment.
+                    </p>
+                    
+                    <div class="bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-4 sm:p-6 rounded-xl border border-purple-500/20 mb-6 sm:mb-8">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Our Mission</h3>
+                        <p class="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">
+                            At Rhythm and Beat, our mission is to empower local, beginner musicians by providing exceptional sound solutions, creating memorable events, and producing high-quality music. We strive to bridge the gap between emerging talent and the music industry by offering affordable, professional services in sound equipment, event management, and music production.
+                        </p>
+                        <p class="text-sm sm:text-base text-gray-400">
+                            Our goal is to help musicians grow, develop their skills, and showcase their talent to a broader audience through our creative, innovative services.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-pink-900/30 to-orange-900/30 p-4 sm:p-6 rounded-xl border border-pink-500/20 mb-6 sm:mb-8">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Our Vision</h3>
+                        <p class="text-sm sm:text-base text-gray-300">
+                            Our vision is to become a key player in the local music scene, recognized for our dedication to supporting beginner musicians and delivering top-notch sound and event services. We aim to inspire and nurture a vibrant community of artists and music lovers, while transforming events and music production into memorable experiences. Rhythm and Beat aspires to be the leading platform for emerging talent, helping musicians build their careers and make an impact in the industry.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Our Objectives</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Support Local Musicians:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Offer music production services to help develop professional-quality tracks</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-pink-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Exceptional Sound Services:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Supply high-quality equipment and expert engineering for live events</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Create Impactful Events:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Organize events that highlight emerging talent and connect with audiences</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Foster Community:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Build a supportive network of musicians and music enthusiasts</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Promote Music Education:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Provide resources and workshops to enhance musician skills</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2 sm:space-x-3">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-1 sm:mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <span class="text-white font-semibold text-sm sm:text-base">Expand Brand Presence:</span>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Grow as a trusted partner in the local music scene</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-8 lg:mt-0">
+                    <div class="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl overflow-hidden border border-purple-500/20">
+                        <video 
+                            class="w-full h-full object-cover rounded-2xl" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline>
+                            <source src="MEDIA/1006.mp4" type="video/mp4">
+                            <!-- Fallback content if video doesn't load -->
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-600/20 to-pink-600/20">
+                                <div class="text-center px-4">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 pulse-glow">
+                                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Video Preview</h3>
+                                    <p class="text-sm sm:text-base text-gray-400">Experience our work in action</p>
+                                </div>
+                            </div>
+                        </video>
+                        <!-- Video overlay for branding -->
+                        <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 bg-black/50 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                            <p class="text-white text-xs sm:text-sm font-semibold">Rhythm & Beat in Action</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Founder Section -->
+    <section id="founder" class="py-12 sm:py-16 lg:py-20 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                    <span class="gradient-text">Our Founder</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2">
+                    Meet the visionary behind Rhythm & Beat Entertainment
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                <div class="relative">
+                    <div class="w-full h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center border border-purple-500/20 float relative overflow-hidden">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0">
+                            <img 
+                                src="MEDIA/YOUTUBE_-removebg-preview.png" 
+                                alt="Music studio background" 
+                                class="w-full h-full object-cover rounded-2xl opacity-20"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/60 to-pink-900/60 rounded-2xl"></div>
+                        
+                        <div class="text-center relative z-10">
+                            <div class="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow overflow-hidden border-4 border-white/20 relative">
+                                <!-- Professional Profile Image -->
+                                <img 
+                                    src="MEDIA/WhatsApp Image 2025-07-25 at 4.08.32 AM (2).jpeg" 
+                                    alt="William Leshoro - Founder & Creative Director" 
+                                    class="w-full h-full object-cover rounded-full"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <!-- Fallback SVG if image fails to load -->
+                                <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                                    <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </div>
+                                <!-- Overlay for professional look -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent rounded-full"></div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">William Leshoro</h3>
+                            <p class="text-lg text-gray-400 mb-4">Founder & Creative Director</p>
+                            <div class="flex justify-center space-x-4">
+                                <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                                <div class="w-3 h-3 bg-pink-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                                <div class="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-lg text-gray-300 mb-6 italic">
+                        "Music isn't just my passion—it's my purpose. Every beat, every sound, every moment of silence between notes tells a story."
+                    </p>
+                    <h3 class="text-2xl font-bold mb-4 text-white">The Vision:</h3>
+                    <p class="text-gray-400 mb-6">
+                        "I've seen too many talented musicians struggle to get their voices heard. That's why Rhythm & Beat isn't just about providing equipment—we're about creating opportunities, building communities, and turning dreams into reality."
+                    </p>
+                    <h3 class="text-2xl font-bold mb-4 text-white">The Mission:</h3>
+                    <p class="text-gray-400 mb-8">
+                        From humble beginnings in Free State, William has built a company that bridges the gap between emerging talent and professional success. Every service we offer is designed to empower artists and create unforgettable experiences.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-4 rounded-xl border border-purple-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">5+</div>
+                            <div class="text-purple-400 text-sm font-semibold">Years in Music</div>
+                        </div>
+                        
+                        <div class="text-center bg-gradient-to-br from-pink-900/30 to-orange-900/30 p-4 rounded-xl border border-pink-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">0+</div>
+                            <div class="text-pink-400 text-sm font-semibold">Events Produced</div>
+                        </div>
+                        
+                        <div class="text-center bg-gradient-to-br from-orange-900/30 to-yellow-900/30 p-4 rounded-xl border border-orange-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">0+</div>
+                            <div class="text-orange-400 text-sm font-semibold">Artists Supported</div>
+                        </div>
+                        
+                        <div class="text-center bg-gradient-to-br from-yellow-900/30 to-green-900/30 p-4 rounded-xl border border-yellow-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">0+</div>
+                            <div class="text-yellow-400 text-sm font-semibold">Productions Created</div>
+                        </div>
+                        
+                        <div class="text-center bg-gradient-to-br from-green-900/30 to-blue-900/30 p-4 rounded-xl border border-green-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">3+</div>
+                            <div class="text-green-400 text-sm font-semibold">Front-End Development</div>
+                        </div>
+                        
+                        <div class="text-center bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-4 rounded-xl border border-blue-500/20">
+                            <div class="text-3xl font-bold text-white mb-1">0+</div>
+                            <div class="text-blue-400 text-sm font-semibold">Photo Studio</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-6 rounded-xl border border-purple-500/20">
+                        <h4 class="text-lg font-bold text-white mb-3">William's Philosophy</h4>
+                        <p class="text-gray-300 italic">
+                            "Every great song starts with a single note. Every successful event begins with perfect sound. Every artist's journey starts with someone who believes in them. At Rhythm & Beat, we don't just provide services—we provide the foundation for dreams to become reality. Because when the music stops, the memories should last forever."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- William's Team -->
+            <div class="mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4">
+                        <span class="gradient-text">William's Team</span>
+                    </h3>
+                    <p class="text-lg text-gray-300">
+                        Meet the talented professionals working alongside our founder
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-2xl border border-purple-500/20 text-center relative overflow-hidden">
+                        <!-- Background Pattern for Audio Engineer -->
+                         <div class="absolute inset-0">
+                            <img 
+                                src="MEDIA/af3664ba-0d77-4e01-822e-5c8d37189c0d.jpg" 
+                                alt="Music studio background" 
+                                class="w-full h-full object-cover rounded-2xl opacity-20"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        
+                        <!-- Floating Audio Elements -->
+                        <div class="absolute top-4 right-4 opacity-10">
+                            <svg class="w-8 h-8 text-purple-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 opacity-10">
+                            <svg class="w-6 h-6 text-pink-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="relative mb-6 z-10">
+                            <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto pulse-glow overflow-hidden border-4 border-white/20">
+                                 <img 
+                                    src="MEDIA/R&B HR.png" 
+                                    alt="William Leshoro - Founder & Creative Director" 
+                                    class="w-full h-full object-cover rounded-full"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Lydia Leshoro</h4>
+                        <p class="text-purple-400 font-semibold mb-4">HR & Content Marketing </p>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            With 1+ years in professional HR & Content Marketing.
+                        </p>
+                        <div class="flex justify-center space-x-4 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-xs text-gray-400">HR</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                                <span class="text-xs text-gray-400">Marketing</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-900/20 p-3 rounded-lg">
+                            <p class="text-gray-300 text-xs italic">
+                                "Great sound is invisible - you only notice it when it's missing."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="bg-gradient-to-br from-pink-900/30 to-orange-900/30 p-8 rounded-2xl border border-pink-500/20 text-center relative overflow-hidden">
+                        <!-- Background Pattern for DJ -->
+                          <div class="absolute inset-0">
+                            <img 
+                                src="MEDIA/Untitled design (1).png" 
+                                alt="Music studio background" 
+                                class="w-full h-full object-cover rounded-2xl opacity-20"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        
+                        <!-- Floating DJ Elements -->
+                        <div class="absolute top-4 right-4 opacity-10">
+                            <svg class="w-8 h-8 text-pink-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 opacity-10">
+                            <svg class="w-6 h-6 text-orange-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="absolute top-1/2 left-4 opacity-8">
+                            <svg class="w-4 h-4 text-pink-300" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="relative mb-6 z-10">
+                            <div class="w-24 h-24 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full flex items-center justify-center mx-auto pulse-glow overflow-hidden border-4 border-white/20">
+                                 <img 
+                                    src="MEDIA/WhatsApp Image 2025-07-25 at 4.08.32 AM (2).jpeg" 
+                                    alt="William Leshoro - Founder & Creative Director" 
+                                    class="w-full h-full object-cover rounded-full"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">William Leshoro</h4>
+                        <p class="text-pink-400 font-semibold mb-4">Sound Engineer & DJ</p>
+                        <p class="text-gray-300 mb-4 text-sm">
+                             His creative vision and DJ skills make every event unforgettable and perfectly tailored to the audience.
+                        </p>
+                        <div class="flex justify-center space-x-4 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                                <span class="text-xs text-gray-400">DJ Sets</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                <span class="text-xs text-gray-400">Events</span>
+                            </div>
+                        </div>
+                        <div class="bg-pink-900/20 p-3 rounded-lg">
+                            <p class="text-gray-300 text-xs italic">
+                                "Music is the universal language - I just help translate the vibe."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 sm:py-16 lg:py-20 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                    <span class="gradient-text">Our Gallery</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2">
+                    Capturing moments from our events, studio sessions, and creative projects
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <!-- DJ Event -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Wedding Reception</h3>
+                            <p class="text-gray-400 text-sm">DJ performance at elegant venue</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Studio Session -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-pink-900/30 to-orange-900/30 border border-pink-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Recording Session</h3>
+                            <p class="text-gray-400 text-sm">Artist in our professional studio</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Corporate Event -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-900/30 to-yellow-900/30 border border-orange-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Corporate Launch</h3>
+                            <p class="text-gray-400 text-sm">Sound system for business event</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Music Video Production -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Music Video</h3>
+                            <p class="text-gray-400 text-sm">Behind the scenes production</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Website Launch -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-900/30 to-teal-900/30 border border-green-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Website Launch</h3>
+                            <p class="text-gray-400 text-sm">Client celebrating new site</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Live Performance -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-900/30 to-pink-900/30 border border-red-500/20 aspect-square">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow">
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Live Concert</h3>
+                            <p class="text-gray-400 text-sm">Sound engineering for live show</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-400 mb-6">Want to see your event featured in our gallery?</p>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                        class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
+                    Book Your Event
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-16 lg:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                    <span class="gradient-text">Get In Touch</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 px-2">
+                    Ready to create something amazing together? Let's talk!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Contact Information</h3>
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-center space-x-3 sm:space-x-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold text-sm sm:text-base">Address</p>
+                                <p class="text-gray-400 text-sm sm:text-base">14 Crocodile Street, Free State, South Africa</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 sm:space-x-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold text-sm sm:text-base">Phone</p>
+                                <p class="text-gray-400 text-sm sm:text-base">0780924215</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 sm:space-x-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold text-sm sm:text-base">Email</p>
+                                <p class="text-gray-400 text-sm sm:text-base break-all">william.wp77@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 lg:mt-0">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Find Us Here</h3>
+                    <div class="bg-gray-700 rounded-2xl p-4 sm:p-6 border border-purple-500/20">
+                        <!-- Interactive Map -->
+                        <div class="relative h-64 sm:h-80 bg-gray-800 rounded-xl overflow-hidden border border-gray-600">
+                            <iframe 
+                                src="https://www.google.com/maps?q=14+Crocodile+Street,+Allanridge,+Free+State,+9490&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 sm:py-12 border-t border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 sm:space-x-3 mb-4 lg:mb-0">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                        <span class="text-sm sm:text-lg font-bold">R&B</span>
+                    </div>
+                    <div>
+                        <h3 class="text-base sm:text-lg font-bold gradient-text">Rhythm & Beat Entertainment</h3>
+                        <p class="text-xs text-gray-400 hidden sm:block">Founded 2025 by William Leshoro</p>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <p class="text-gray-400 mb-1 sm:mb-2 text-sm sm:text-base">© 2025 Rhythm & Beat Entertainment. All rights reserved.</p>
+                    <p class="text-xs sm:text-sm text-gray-500">Bringing sound, music, and digital experiences to life</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const name = formData.get('name') || event.target.querySelector('input[type="text"]').value;
+            const email = formData.get('email') || event.target.querySelector('input[type="email"]').value;
+            const service = event.target.querySelector('select').value;
+            const message = event.target.querySelector('textarea').value;
+            
+            // Show success message
+            alert(`Thank you ${name}! Your message about ${service} has been received. We'll get back to you at ${email} soon!`);
+            
+            // Reset form
+            event.target.reset();
+        }
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnMenuBtn && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) { // lg breakpoint
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a3d7b722304eca',t:'MTc1OTczOTkwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
